@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZIISUU.EXE - Diagnosa Kerusakan</title>
+    
+    <link rel="stylesheet" href="css/diagnosa-style.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="container">
+        <a href="index.html" class="logo">AZIISUU.EXE</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="data-kerusakan.html">Data Kerusakan</a></li>
+                <li><a href="diagnosa.html" class="active">Diagnosa Kerusakan</a></li>
+                <li><a href="aboutme.html">Aboutme</a></li>
+            </ul>
+        </nav>
+        <a href="login.php" class="btn btn-primary">Admin Login</a>
+    </header>
+
+    <div class="main-container">
+        
+        <div id="step-1" class="form-card">
+            <h2>Form Diagnosa Kerusakan</h2>
+            <form id="form-step-1">
+                <div class="input-group">
+                    <label for="nama_customer">Nama Customer</label>
+                    <input type="text" id="nama_customer" name="nama_customer" placeholder="Enter username" required>
+                </div>
+                <div class="input-group">
+                    <label for="brand_model">Nama Brand dan Model Perangkat</label>
+                    <input type="text" id="brand_model" name="brand_model" placeholder="Enter brand name" required>
+                </div>
+                <div class="input-group">
+                    <label for="os_pilihan">Jenis Sistem Operasi</label>
+                    <select id="os_pilihan" name="os_pilihan" required>
+                        <option value="" disabled selected>Pilih sistem operasi anda..</option>
+                        <option value="Android">Android</option>
+                        <option value="Windows">Windows</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-diagnosa">Next</button>
+            </form>
+        </div>
+
+        <div id="step-2" class="form-card" style="display: none;">
+            <h2>Keluhan Kerusakan Hardware</h2>
+            <div id="os-display-result" class="os-display"></div>
+            <form id="form-step-2">
+                <div id="gejala-list-container" class="gejala-list">
+                    <p>Pilih kerusakan sesuai yang kamu alami :</p>
+                    </div>
+                <button type="submit" class="btn-diagnosa">Mulai Diagnosa</button>
+            </form>
+        </div>
+
+        <div id="step-3" class="result-card" style="display: none;">
+            <h2>Hasil Diagnosa Kerusakan</h2>
+            <div class="result-info">
+                <p><strong>Nama Customer:</strong> <span id="result-nama"></span></p>
+                <p><strong>Perangkat:</strong> <span id="result-brand"></span></p>
+                <p><strong>Sistem Operasi:</strong> <span id="result-os"></span></p>
+                <p><strong>Tanggal Diagnosa:</strong> <span id="result-tanggal"></span></p>
+            </div>
+            <hr>
+
+            <div class="result-solution"> 
+                <h3>Gejala yang Dialami</h3>
+                <ul id="result-gejala">
+                    </ul>
+            </div>
+            <div class="result-conclusion">
+                <h3>Kesimpulan</h3>
+                <p id="result-kesimpulan" class="diagnosis">Tidak ditemukan</p>
+            </div>
+            <div class="result-solution">
+                <h3>Saran Perbaikan</h3>
+                <ul id="result-solusi">
+                    </ul>
+            </div>
+            <a href="diagnosa.html" class="btn-diagnosa">Diagnosa Lagi</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="logo">AZIISUU.EXE</p>
+                <p class="copyright">&copy; 2025 All Rights Reserved</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-title">Web Dev Gabut :V</p>
+                <p class="footer-subtitle">"Cukup kerusakan laptop aja yang asing, kamu jangan."</p>
+                <div class="social-media">
+                    <a href="#"><img src="img/WA.png" alt="Whatsapp"></a>
+                    <a href="#"><img src="img/IG.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/TIKTOK.png" alt="TikTok"></a>
+                    <a href="#"><img src="img/GIT.png" alt="Github"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/diagnosa.js"></script>
+</body>
+</html>

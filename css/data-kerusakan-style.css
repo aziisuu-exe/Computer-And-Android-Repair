@@ -1,0 +1,321 @@
+/* Ambil dari: diagnosa-style.css */
+@font-face {
+    font-family: 'Valorant';
+    src: url('../fonts/Valorant.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OdibeeSans';
+    src: url('../fonts/OdibeeSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GLOBALS */
+
+:root {
+    --primary-color: #D9534F;
+    --background-color: #1C1C1C;
+    --text-color: #E0E0E0;
+    --text-darker: #A0A0A0;
+    --container-width: 1140px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER & FOOTER */
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.logo {
+    font-family: 'Valorant', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+header nav a {
+    font-family: 'OdibeeSans', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+header nav a.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left .logo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-left .copyright {
+    color: var(--text-darker);
+    font-size: 0.9rem;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right .footer-title {
+    font-weight: 900; 
+    font-size: 1.1rem;
+}
+
+.footer-right .footer-subtitle {
+    color: var(--text-darker);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-media a:hover img {
+    opacity: 1;
+}
+
+/* BUTTON */
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    /* ...style Anda yang sudah ada... */
+    color: var(--primary-color);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease; /* Tambahkan transisi baru */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px); /* Kita bisa tetap pertahankan ini */
+    color: white; /* Ubah warna teks jadi putih */
+    /* Tambahkan bayangan (glow) dengan warna primer Anda */
+    box-shadow: 0 0 15px 5px rgba(232, 74, 95, 0.5); /* E84A5F = 232, 74, 95 */
+}
+
+.btn-secondary {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+}
+
+/* Main Design */
+
+.main-container {
+    width: 100%;
+    max-width: var(--container-width); /* Lebar penuh */
+    padding: 20px;
+    margin: 3rem auto;
+}
+
+.main-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-family: 'OdibeeSans', sans-serif;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+/* Style untuk navigasi Tab */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #3D3B42;
+}
+.tab-btn {
+    font-family: 'OdibeeSans', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-darker);
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+.tab-btn:hover {
+    color: white;
+}
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Wrapper untuk konten tab */
+.tab-content-wrapper {
+    position: relative;
+    min-height: 400px;
+}
+.tab-content {
+    display: none;
+    gap: 1.5rem;
+}
+.tab-content.active {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Animasi Sederhana (Diminta) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style untuk Kartu Data */
+.item-card {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #3D3B42;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.item-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+.item-card p {
+    margin-bottom: 0.5rem;
+    color: var(--text-darker);
+    font-size: 0.9rem;
+}
+.item-card strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.item-card ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-top: 0.5rem;
+}
+.item-card li {
+    background-color: #3D3B42;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Style khusus untuk sub-judul di dalam tab */
+.tab-content h3.sub-header {
+    grid-column: 1 / -1; /* Rentangkan penuh */
+    font-family: 'OdibeeSans', sans-serif;
+    letter-spacing: 0.2rem;
+    color: var(--text-darker);
+    font-size: 1.5rem;
+    border-bottom: 1px solid #444;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* Loader sederhana */
+.loader {
+    border: 4px solid #3D3B42;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 4rem auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

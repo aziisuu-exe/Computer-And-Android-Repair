@@ -1,0 +1,83 @@
+[
+    {
+        "customer": "Naufaldi",
+        "perangkat": "Asus ROG",
+        "sistemOperasi": "Windows",
+        "tanggalDiagnosa": "29 Oktober 2025",
+        "statusKonsultasi": "Menunggu Balasan Atmint",
+        "gejala": [
+            "Overheating (panas berlebih pada body)",
+            "Adapter\/charger panas berlebihan",
+            "Keyboard beberapa tombol tidak berfungsi",
+            "Laptop mati mendadak saat digunakan",
+            "Booting sangat lambat"
+        ],
+        "hasil": {
+            "kesimpulan": "Keyboard Rusak",
+            "solusi": [
+                "1. Bersihkan keyboard",
+                "2. Ganti keycaps atau papan keyboard"
+            ]
+        }
+    },
+    {
+        "customer": "Fathur",
+        "perangkat": "Probook Hp 123",
+        "sistemOperasi": "Windows",
+        "tanggalDiagnosa": "1 November 2025",
+        "statusKonsultasi": "Menunggu Balasan Atmint",
+        "gejala": [
+            "Laptop tidak bisa menyala sama sekali",
+            "Tidak ada tampilan di layar meskipun lampu power menyala",
+            "Layar menampilkan garis-garis atau dead pixel"
+        ],
+        "hasil": {
+            "kesimpulan": "Motherboard Rusak",
+            "solusi": [
+                "1. Cek adaptor dan power supply",
+                "2. Tes RAM dan prosesor",
+                "3. Ganti motherboard bila rusak"
+            ]
+        }
+    },
+    {
+        "customer": "Fathur",
+        "perangkat": "oppo r15",
+        "sistemOperasi": "Android",
+        "tanggalDiagnosa": "1 November 2025",
+        "statusKonsultasi": "Menunggu Balasan Atmint",
+        "gejala": [
+            "Tidak bisa menyala sama sekali",
+            "Baterai tidak mengisi daya"
+        ],
+        "hasil": {
+            "kesimpulan": "Kerusakan Baterai",
+            "solusi": [
+                "1. Cek konektor baterai dan IC power",
+                "2. Kalibrasi baterai",
+                "3. Ganti baterai jika rusak"
+            ]
+        }
+    },
+    {
+        "customer": "udin",
+        "perangkat": "Probook Hp 123",
+        "sistemOperasi": "Android",
+        "tanggalDiagnosa": "1 November 2025",
+        "statusKonsultasi": "Menunggu Balasan Atmint",
+        "gejala": [
+            "Tidak bisa menyala sama sekali",
+            "Baterai tidak mengisi daya",
+            "Baterai cepat habis",
+            "Kamera belakang tidak berfungsi"
+        ],
+        "hasil": {
+            "kesimpulan": "Kerusakan Baterai",
+            "solusi": [
+                "1. Cek konektor baterai dan IC power",
+                "2. Kalibrasi baterai",
+                "3. Ganti baterai jika rusak"
+            ]
+        }
+    }
+]

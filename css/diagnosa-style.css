@@ -1,0 +1,374 @@
+@font-face {
+    font-family: 'Valorant';
+    src: url('../fonts/Valorant.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OdibeeSans';
+    src: url('../fonts/OdibeeSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GLOBALS */
+
+:root {
+    --primary-color: #E84A5F;
+    --background-color: #1A181D;
+    --card-background: #2C2A31;
+    --text-color: #E0E0E0;
+    --text-darker: #A0A0A0;
+    --container-width: 1140px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* HEADER & FOOTER */
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.logo {
+    font-family: 'Valorant', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+header nav a {
+    font-family: 'OdibeeSans', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+header nav a.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left .logo { 
+    font-size: 1.2rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.footer-left .copyright { 
+    color: var(--text-darker); 
+    font-size: 0.9rem; 
+}
+
+.footer-right { 
+    text-align: right; 
+}
+
+.footer-right .footer-title { 
+    font-weight: 900; 
+    font-size: 1.1rem; 
+}
+
+.footer-right .footer-subtitle { 
+    color: var(--text-darker); 
+    font-style: italic; 
+    margin-bottom: 1rem; 
+}
+
+.social-media { 
+    display: flex; 
+    gap: 1rem; 
+    justify-content: flex-end; 
+}
+
+.social-media img { 
+    width: 24px; 
+    height: 24px; 
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+
+.social-media a:hover img { 
+    opacity: 1; 
+}
+
+/* BUTTON */
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    /* ...style Anda yang sudah ada... */
+    color: var(--primary-color);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease; /* Tambahkan transisi baru */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px); /* Kita bisa tetap pertahankan ini */
+    color: white; /* Ubah warna teks jadi putih */
+    /* Tambahkan bayangan (glow) dengan warna primer Anda */
+    box-shadow: 0 0 15px 5px rgba(232, 74, 95, 0.5); /* E84A5F = 232, 74, 95 */
+}
+
+.btn-secondary {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 600px; 
+    margin-top: 100px;    
+    margin-bottom: 100px;
+}
+
+.form-card, .result-card {
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #b0b0b0;
+}
+
+.input-group input[type="text"],
+.input-group select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #3D3B42;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-group select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23b0b0b0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: .65em auto;
+}
+
+.btn-diagnosa {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn-diagnosa:hover {
+    background-color: #d73a4f;
+}
+
+.os-display {
+    text-align: center;
+    font-weight: 700;
+    background-color: #3D3B42;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.gejala-list {
+    background-color: #3D3B42;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.gejala-list p {
+    margin-top: 0;
+    font-weight: 500;
+    color: #b0b0b0;
+}
+
+.checkbox-item {
+    display: block;
+    margin-bottom: 0.8rem;
+    background-color: #4A4850;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkbox-item:hover {
+    background-color: #5a5761;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 0.8rem;
+    accent-color: var(--primary-color);
+}
+
+.result-card {
+    text-align: left;
+}
+.result-info p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+.result-info strong {
+    color: #b0b0b0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #444;
+    margin: 2rem 0;
+}
+
+.result-conclusion h3, .result-solution h3 {
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+}
+
+.result-conclusion .diagnosis {
+    background-color: #3D3B42;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.result-solution ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-solution li {
+    background-color: #3D3B42;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.save-success {
+    background-color: #28a74520;
+    border: 1px solid #28a745;
+    color: #a3d9b1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.save-error {
+    background-color: #dc354520;
+    border: 1px solid #dc3545;
+    color: #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}

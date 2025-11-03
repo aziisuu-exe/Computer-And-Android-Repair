@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'Valorant';
+    src: url('../fonts/Valorant.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calvera';
+    src: url('../fonts/Calvera.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OdibeeSans';
+    src: url('../fonts/OdibeeSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GLOBALS */
+
+:root {
+    --primary-color: #D9534F;
+    --background-color: #1C1C1C;
+    --text-color: #E0E0E0;
+    --text-darker: #A0A0A0;
+    --container-width: 1140px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER  */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.logo {
+    font-family: 'Valorant', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+header nav a {
+    font-family: 'OdibeeSans', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+header nav a.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+/* BUTTON */
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    /* ...style Anda yang sudah ada... */
+    color: var(--primary-color);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease; /* Tambahkan transisi baru */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px); /* Kita bisa tetap pertahankan ini */
+    color: white; /* Ubah warna teks jadi putih */
+    /* Tambahkan bayangan (glow) dengan warna primer Anda */
+    box-shadow: 0 0 15px 5px rgba(232, 74, 95, 0.5); /* E84A5F = 232, 74, 95 */
+}
+
+.btn-secondary {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+}
+
+/* MAIN BIOGRAPHY */
+
+.bio {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.bio-text { 
+    flex: 2; 
+}
+
+.bio-image { 
+    flex: 1; 
+    text-align: right; 
+}
+
+.bio-image img { 
+    max-width: 300px; 
+    height: auto;   
+}
+
+.bio-text .greeting { 
+    font-weight: 500; 
+    font-size: 1.2rem; 
+}
+
+.bio-text h1 { 
+    font-weight: 900; 
+    font-size: 3rem;
+    letter-spacing: 3px; 
+    line-height: 1.1; 
+    color: var(--primary-color); 
+    margin-bottom: 1.5rem;
+    font-family: 'Calvera', sans-serif; 
+}
+
+.bio-text .tags { 
+    display: flex; 
+    gap: 1rem; 
+    margin-bottom: 1.5rem; 
+}
+
+.bio-text .tag { 
+    background-color: rgba(217, 83, 79, 0.1); 
+    border: 1px solid var(--primary-color); 
+    padding: 0.3rem 0.8rem; border-radius: 20px; 
+    font-size: 0.9rem; 
+    font-weight: 500; 
+}
+
+.bio-text .description { 
+    color: var(--text-darker); 
+    max-width: 90%; 
+    margin-bottom: 2rem; 
+}
+
+.bio-socials { 
+    display: flex; 
+    gap: 1.5rem; 
+}
+
+.bio-socials img { 
+    width: 28px; 
+    height: 28px; 
+    opacity: 0.7; 
+    transition: all 0.3s ease; 
+}
+
+.bio-socials a:hover img { 
+    opacity: 1; 
+    transform: translateY(-3px); 
+}
+
+.skills { 
+    padding-bottom: 6rem; 
+}
+.skills h2 { 
+    font-family: 'Calvera', sans-serif; 
+    text-align: center; 
+    font-size: 3rem; 
+    padding-bottom: 5rem;
+    color: var(--primary-color); 
+    margin-bottom: 4rem; 
+    letter-spacing: 2px; 
+}
+
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2.5rem; 
+}
+
+.skill-item { 
+    text-align: center; 
+}
+
+.skill-icon { 
+    width: 140px; 
+    height: 140px; 
+    border: 3px solid var(--primary-color); 
+    border-radius: 50%; margin: 0 auto 1.5rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: background-color 0.3s ease; 
+}
+
+.skill-item:hover .skill-icon { 
+    background-color: rgba(217, 83, 79, 0.1); 
+}
+
+.skill-icon img { 
+    max-width: 60px; 
+    height: auto; 
+}
+
+.skill-item h3 { 
+    font-weight: 900; 
+    font-size: 1.2rem; 
+    color: white; 
+    margin-bottom: 0.5rem; 
+}
+
+.skill-item p { 
+    font-weight: 500; 
+    color: var(--text-darker); 
+    font-size: 0.95rem; 
+}
+
+/* BAGIAN FOOTER */
+
+footer {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left .logo { 
+    font-size: 1.2rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.footer-left .copyright { 
+    color: var(--text-darker); 
+    font-size: 0.9rem; 
+}
+
+.footer-right { 
+    text-align: right; 
+}
+
+.footer-right .footer-title { 
+    font-weight: 900; 
+    font-size: 1.1rem; 
+}
+
+.footer-right .footer-subtitle { 
+    color: var(--text-darker); 
+    font-style: italic; 
+    margin-bottom: 1rem; 
+}
+
+.social-media { 
+    display: flex; 
+    gap: 1rem; 
+    justify-content: flex-end; 
+}
+
+.social-media img { 
+    width: 24px; 
+    height: 24px; 
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+}
+
+.social-media a:hover img { 
+    opacity: 1; 
+}
+
+/* ========================================= */
+/* TAMBAHAN UNTUK ANIMASI (about-script.js) */
+/* ========================================= */
+
+/* 1. STATE AWAL (TERSEMBUNYI) UNTUK SEMUA ELEMEN ANIMASI 
+*/
+.about-text .greeting,
+.about-text h1,
+.about-text .tags,
+.about-text .description,
+.about-text .bio-socials,
+.about-image,
+.skills h2,
+.skill-item {
+    transform: translateY(30px); /* Mulai dari 30px ke bawah */
+    
+    /* Definisi transisi. 
+      Variabel --stagger-delay diatur oleh JavaScript.
+    */
+    transition: opacity 0.6s ease-out, 
+                transform 0.6s ease-out,
+                box-shadow 0.3s ease; /* Transisi untuk hover */
+                
+    transition-delay: var(--stagger-delay, 0ms); /* Default delay 0ms */
+}
+
+/* 2. STATE AKHIR (TERLIHAT) SAAT KELAS 'is-visible' DITAMBAHKAN OLEH JS
+*/
+.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+
+/* 3. EFEK "LIFT" HOVER TAMBAHAN UNTUK SKILL ITEM
+*/
+.skill-item:hover {
+    /* Gunakan transform yang sudah ada di CSS asli Anda, jika ada */
+    /* Di sini kita tambahkan 'lift' (translateY) dan bayangan */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Memperhalus efek hover pada skill-icon yang sudah ada di CSS Anda
+*/
+.skill-icon {
+    /* Tambahkan transisi ini agar tidak 'patah' saat di-hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.skill-item:hover .skill-icon {
+    /* Ini adalah aturan dari CSS asli Anda, 
+      kita bisa tambahkan sedikit 'scale' untuk membuatnya lebih menonjol 
+    */
+    background-color: rgba(217, 83, 79, 0.1); 
+    transform: scale(1.1);
+}

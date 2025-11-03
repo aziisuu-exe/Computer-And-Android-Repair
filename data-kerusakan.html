@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZIISUU.EXE - Data Kerusakan</title>
+    
+    <link rel="stylesheet" href="css/data-kerusakan-style.css"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="container">
+        <a href="index.html" class="logo">AZIISUU.EXE</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="data-kerusakan.html" class="active">Data Kerusakan</a></li>
+                <li><a href="diagnosa.html">Diagnosa Kerusakan</a></li>
+                <li><a href="aboutme.html">Aboutme</a></li>
+            </ul>
+        </nav>
+        <a href="login.php" class="btn btn-primary">Admin Login</a>
+    </header>
+
+    <div class="main-container">
+        <h2>Pusat Data Sistem</h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="riwayat">Riwayat Diagnosa</button>
+            <button class="tab-btn" data-tab="pengetahuan">Basis Pengetahuan</button>
+            <button class="tab-btn" data-tab="gejala">Daftar Gejala</button>
+        </div>
+
+        <div class="tab-content-wrapper">
+            
+            <div id="riwayat" class="tab-content active">
+                <div class="loader"></div>
+            </div>
+            
+            <div id="pengetahuan" class="tab-content">
+                </div>
+
+            <div id="gejala" class="tab-content">
+                </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="logo">AZIISUU.EXE</p>
+                <p class="copyright">&copy; 2025 All Rights Reserved</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-title">Web Dev Gabut :V</p>
+                <p class="footer-subtitle">"Cukup kerusakan laptop aja yang asing, kamu jangan."</p>
+                <div class="social-media">
+                    <a href="#"><img src="img/WA.png" alt="Whatsapp"></a>
+                    <a href="#"><img src="img/IG.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/TIKTOK.png" alt="TikTok"></a>
+                    <a href="#"><img src="img/GIT.png" alt="Github"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script> <script src="js/data-kerusakan.js"></script> </body>
+</html>

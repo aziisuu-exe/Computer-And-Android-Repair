@@ -1,0 +1,178 @@
+ @font-face {
+    font-family: 'Valorant';
+    src: url('../fonts/Valorant.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #211E26;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    padding: 2rem;
+}
+
+.login-card {
+    display: flex;
+    align-items: flex-start; /* Mencegah kolom meregang */
+    width: 800px;
+    min-height: 480px;      /* MEMBERI TINGGI MINIMAL YANG TETAP */
+    max-width: 90vw;
+    background-color: #1A181D;
+    border: 3px solid #6A3A41;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-image {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A181D;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.login-form {
+    flex-basis: 50%;
+    align-items: flex-start;
+    padding: 3rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.site-brand {
+    font-family: 'Valorant', sans-serif;
+    font-size: 1.5rem;
+    color: #D14D5F;
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #929195;
+    margin: 0.25rem 0 2rem 0;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #100E13;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #D14D5F;
+    box-shadow: 0 0 0 3px rgba(209, 77, 95, 0.2);
+}
+
+.input-group input::placeholder {
+    color: #6c6c6c;
+}
+
+.form-options {
+    margin-bottom: 1.5rem;
+}
+
+.form-options label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
+    font-size: 0.9rem;
+    color: #B0B0B0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-options input[type="checkbox"] {
+    margin-right: 0.5rem;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #100E13;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.form-options input[type="checkbox"]:checked {
+    background-color: #D14D5F;
+    border-color: #D14D5F;
+}
+
+.form-options input[type="checkbox"]:checked::before {
+    content: '✔';
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(90deg, #F95C6B, #D14D5F);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600; 
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(249, 92, 107, 0.3);
+}
+
+.error-message {
+    background-color: #ff4d4d20;
+    border: 1px solid #ff4d4d;
+    color: #ffb3b3;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
